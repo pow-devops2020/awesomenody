@@ -1,0 +1,89 @@
+
+Showing logs for build [32mpow-devops2020-awesomenody-pr-3-99gjn-3[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-52tmm[0m
+{"level":"info","ts":1599050861.8925538,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1599050861.8929956,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mpow-devops2020-awesomenody-pr-3-99gjn-3[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-n4ts9[0m
+{"level":"info","ts":1599050862.3607426,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1599050862.361738,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mpow-devops2020-awesomenody-pr-3-99gjn-3[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mpow-devops2020-awesomenody-pr-3-99gjn-3[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-pow-devops2020-awesomenody-pr-3-99gjn-48nrq[0m
+{"level":"info","ts":1599050867.4308329,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1599050871.361475,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/**************/awesomenody.git @ master in path /workspace/source"}
+
+Showing logs for build [32mpow-devops2020-awesomenody-pr-3-99gjn-3[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mpow-devops2020-awesomenody-pr-3-99gjn-3[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:6872fd34f78eb7f63b13e49382b9bd2c54be46ad,3:f53a7c9f14b2922246daaca429d3d4c74671bff4
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow f53a7c9f14b2922246daaca429d3d4c74671bff4: 6872fd34f78eb7f63b13e49382b9bd2c54be46ad:
+DEBUG: ran git fetch --unshallow origin f53a7c9f14b2922246daaca429d3d4c74671bff4: 6872fd34f78eb7f63b13e49382b9bd2c54be46ad: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 6872fd34f78eb7f63b13e49382b9bd2c54be46ad
+DEBUG: ran git reset --hard 6872fd34f78eb7f63b13e49382b9bd2c54be46ad in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git merge f53a7c9f14b2922246daaca429d3d4c74671bff4
+DEBUG: ran git merge f53a7c9f14b2922246daaca429d3d4c74671bff4 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 6872fd34f78eb7f63b13e49382b9bd2c54be46ad..HEAD
+Merged SHA f53a7c9f14b2922246daaca429d3d4c74671bff4 with commit message 'Update index.html' into base branch master
+
+Showing logs for build [32mpow-devops2020-awesomenody-pr-3-99gjn-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mpow-devops2020-awesomenody-pr-3-99gjn-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN REPLACE_ME@1.0.0 No repository field.
+npm WARN REPLACE_ME@1.0.0 No license field.
+
+up to date in 0.814s
+found 0 vulnerabilities
+
+
+Showing logs for build [32mpow-devops2020-awesomenody-pr-3-99gjn-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> REPLACE_ME@1.0.0 test /workspace/source
+> echo "no test specified" && exit 0
+
+no test specified
+
+Showing logs for build [32mpow-devops2020-awesomenody-pr-3-99gjn-3[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0003] Resolved base name node:9-slim to node:9-slim 
+[36mINFO[0m[0003] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0003] Resolved base name node:9-slim to node:9-slim 
+[36mINFO[0m[0003] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0008] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0011] Built cross stage deps: map[]                
+[36mINFO[0m[0011] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0013] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0015] cmd: EXPOSE                                  
+[36mINFO[0m[0015] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0015] Checking for cached layer docker.io/******/cache:d04b17f2a7f27970c2f49372361b8b570f7b1ceed4c53acba51d92265fc34eb5... 
+[36mINFO[0m[0017] No cached layer found for cmd COPY . .       
+[36mINFO[0m[0017] Unpacking rootfs as cmd COPY . . requires it. 
+[36mINFO[0m[0029] Taking snapshot of full filesystem...        
+[36mINFO[0m[0029] Resolving paths                              
+[36mINFO[0m[0030] ENV PORT 8080                                
+[36mINFO[0m[0030] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0030] EXPOSE 8080                                  
+[36mINFO[0m[0030] cmd: EXPOSE                                  
+[36mINFO[0m[0030] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0030] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0030] WORKDIR /usr/src/app                         
+[36mINFO[0m[0030] cmd: workdir                                 
+[36mINFO[0m[0030] Changed working directory to /usr/src/app    
+[36mINFO[0m[0030] Creating directory /usr/src/app              
+[36mINFO[0m[0030] Resolving paths                              
+[36mINFO[0m[0030] Taking snapshot of files...                  
+[36mINFO[0m[0030] COPY . .                                     
+[36mINFO[0m[0030] Resolving paths                              
+[36mINFO[0m[0030] Taking snapshot of files...                  
+[36mINFO[0m[0031] CMD ["npm", "start"]                         
+[36mINFO[0m[0031] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0031] Pushing layer docker.io/******/cache:d04b17f2a7f27970c2f49372361b8b570f7b1ceed4c53acba51d92265fc34eb5 to cache now 
+error pushing image: failed to push to destination docker.io/******/awesomenody:0.0.0-SNAPSHOT-PR-3-3: UNAUTHORIZED: authentication required; [map[Action:pull Class: Name:******/awesomenody Type:repository] map[Action:push Class: Name:******/awesomenody Type:repository] map[Action:pull Class: Name:library/node Type:repository]]
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-container-build'. The execution of the pipeline has stopped.[0m
