@@ -1,0 +1,56 @@
+
+Showing logs for build [32mpow-devops2020-awesomenody-pr-3-965wl-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-xfdmp[0m
+{"level":"info","ts":1599040741.1345098,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1599040741.1397479,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mpow-devops2020-awesomenody-pr-3-965wl-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-w6s56[0m
+{"level":"info","ts":1599040741.6417527,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1599040741.6487179,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mpow-devops2020-awesomenody-pr-3-965wl-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mpow-devops2020-awesomenody-pr-3-965wl-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-pow-devops2020-awesomenody-pr-3-965wl-7pl8g[0m
+{"level":"info","ts":1599040746.6287522,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1599040752.3600967,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/**************/awesomenody.git @ master in path /workspace/source"}
+
+Showing logs for build [32mpow-devops2020-awesomenody-pr-3-965wl-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mpow-devops2020-awesomenody-pr-3-965wl-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:6872fd34f78eb7f63b13e49382b9bd2c54be46ad,3:f53a7c9f14b2922246daaca429d3d4c74671bff4
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow f53a7c9f14b2922246daaca429d3d4c74671bff4: 6872fd34f78eb7f63b13e49382b9bd2c54be46ad:
+DEBUG: ran git fetch --unshallow origin f53a7c9f14b2922246daaca429d3d4c74671bff4: 6872fd34f78eb7f63b13e49382b9bd2c54be46ad: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git reset --hard 6872fd34f78eb7f63b13e49382b9bd2c54be46ad
+DEBUG: ran git reset --hard 6872fd34f78eb7f63b13e49382b9bd2c54be46ad in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge f53a7c9f14b2922246daaca429d3d4c74671bff4
+DEBUG: ran git merge f53a7c9f14b2922246daaca429d3d4c74671bff4 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 6872fd34f78eb7f63b13e49382b9bd2c54be46ad..HEAD
+Merged SHA f53a7c9f14b2922246daaca429d3d4c74671bff4 with commit message 'Update index.html' into base branch master
+
+Showing logs for build [32mpow-devops2020-awesomenody-pr-3-965wl-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mpow-devops2020-awesomenody-pr-3-965wl-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN REPLACE_ME@1.0.0 No repository field.
+npm WARN REPLACE_ME@1.0.0 No license field.
+
+up to date in 0.699s
+found 0 vulnerabilities
+
+
+Showing logs for build [32mpow-devops2020-awesomenody-pr-3-965wl-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> REPLACE_ME@1.0.0 test /workspace/source
+> echo "no test specified" && exit 0
+
+no test specified
+
+Showing logs for build [32mpow-devops2020-awesomenody-pr-3-965wl-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+error checking push permissions -- make sure you entered the correct tag name, and that you are authenticated correctly, and try again: checking push permission for "docker.io/******/awesomenody:0.0.0-SNAPSHOT-PR-3-1": resolving authorization for index.docker.io failed: /kaniko/.docker/config.json: illegal base64 data at input byte 8
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-container-build'. The execution of the pipeline has stopped.[0m
