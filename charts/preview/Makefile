@@ -1,4 +1,6 @@
 OS := $(shell uname)
+HTTP_PROXY := 10.110.63.27:8080
+HTTPS_PROXY := 10.110.63.27:8080
 
 preview: 
 ifeq ($(OS),Darwin)
