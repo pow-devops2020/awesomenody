@@ -15,4 +15,6 @@ else
 	exit -1
 endif
 	echo "  version: $(PREVIEW_VERSION)" >> requirements.yaml
+	export https_proxy=10.110.63.27:8080
+	export http_proxy=10.110.63.27:8080
 	jx step helm build
